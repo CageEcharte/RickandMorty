@@ -2,30 +2,50 @@ import React, { Component } from 'react';
 import './customers.css';
 
 class Customers extends Component {
-  constructor() {
-    super();
-    this.state = {
-      customers: []
-    };
-  }
 
-  componentDidMount() {
-    fetch('/api/customers')
-      .then(res => res.json())
-      .then(customers => this.setState({customers}, () => console.log('Customers fetched...', customers)));
-  }
+
+    constructor(props) {
+      super(props);
+
+      this.state = {
+        character: [],
+        loading: false,
+
+      };
+    }
+
+    componentDidMount() {
+      this.setState({ loading: true });
+        fetch('https://rickandmortyapi.com/api/episode/28')
+        .then(response => response.json())
+        .then(response => this.setState({ character: response, loading: false }));
+    }
+
 
   render() {
+
+    const {loading, character} = this.state;
+
+
+
+       if (loading) {
+           return <p>Loading ... </p>;
+         }
+
+if(character.characters){
+  for(var i = 0; i < character.characters.length; i++){
+    console.log(character.characters[i]);
+  }
+}
+
+
     return (
       <div>
-        <h2>Customers</h2>
-        <ul>
-        {this.state.customers.map(customer => 
-          <li key={customer.id}>{customer.firstName} {customer.lastName}</li>
-        )}
-        </ul>
+        {character.name}
       </div>
     );
+
+
   }
 }
 
