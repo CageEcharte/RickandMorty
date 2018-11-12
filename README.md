@@ -7,7 +7,7 @@
 ### Author
 Carlos Echarte
 
-And a Honorable mention to Brad Traversy for creating the starter pack
+Honorable mention to Brad Traversy for creating the starter pack.
 
 ### Version
 
