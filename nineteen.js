@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './customers.css';
 
-class EpisodeTwo extends Component {
+class EpisodeNineteen extends Component {
 
 
   constructor(props) {
@@ -16,7 +16,7 @@ class EpisodeTwo extends Component {
 
   componentDidMount() {
     this.setState({ loading: true });
-    fetch('https://rickandmortyapi.com/api/episode/2')
+    fetch('https://rickandmortyapi.com/api/episode/19')
       .then(response => response.json())
       .then(response => {
         const arr = []
@@ -62,12 +62,10 @@ class EpisodeTwo extends Component {
       {characters.map(({ name, status, species, image })=> {
         return(
           <div class="row">
-          <img className="image" src={ image } />
-          <div> Name: {name} </div>
-          <div> Status: {status}</div>
-          <div> Species: {species}</div>
-          <div> Episode: </div>
-          <div className="sodeName1"> Lawnmower Dog </div>
+             <div> {name} </div>
+             <div>Status: {status}</div>
+             <div>Species: {species}</div>
+            <img src={ image } />
           </div>
         )
       })}
@@ -79,4 +77,4 @@ class EpisodeTwo extends Component {
   }
 }
 
-export default EpisodeTwo;
+export default EpisodeNineteen;

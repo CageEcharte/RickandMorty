@@ -7,12 +7,18 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">React Express Starter</h1>
-        </header>
+
+          <div class="header">
+          <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
+          </link>
+          <link href="https://fonts.googleapis.com/css?family=Basic|Orbitron|Roboto" rel="stylesheet">
+          </link>
+          <h1 className="App-title">Rick and Morty Tribute App</h1>
+        </div>
         <Customers />
+
       </div>
+
     );
   }
 }
