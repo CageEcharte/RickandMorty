@@ -403,7 +403,12 @@ const Home = () => (
       </p>
 
 <div className="footer">
-<ul className="sigName"> <li className="sigBy"> Created By: </li> <li className="marg"> <a className="sig" href="https://carlosecharte.com/"> Carlos Echarte </a>  </li> </ul> <ul className="sigName"> <li className="sigBy"> Api Source:  </li> <li className="marg">
+<ul className="sigName">
+<li className="sigBy"> Created By: </li>
+<li className="marg">
+<a className="sig" href="https://carlosecharte.com/"> Carlos Echarte </a>  </li> 
+</ul>
+<ul className="sigName"> <li className="sigBy"> Api Source:  </li> <li className="marg">
 <a className="sig" href="https://rickandmortyapi.com/"> rickandmortyapi.com </a> </li>
 </ul>
 </div>
